@@ -1,0 +1,121 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+#head{
+	color: black;
+	text-align: center;
+	text-decoration: underline;
+	text-transform: capitalize;
+	text-shadow: 3px 2px green;
+	font-family: "Times New Roman",Times, serif;
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 40px;
+	word-spacing: 10px;
+}
+
+#road{
+	height: 100vh;
+	width: 100%;
+	background-image: url(stage.webp);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow-x:hidden;
+}
+
+#runner{
+
+	height: 100%;
+	width: 230px;
+	display: block;
+	background-image: url(pug_img.png);
+	position: absolute;
+	bottom: -130px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-repeat: repeat-x;
+	animation: walk 1s steps(4) infinite,
+				forward 5s linear infinite;
+}
+@keyframes walk{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: 1883px;
+	}
+}
+@keyframes forward{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(600px);
+	}
+}
+
+#runner1{
+	height: 100%;
+	width: 95px;
+	display: block;
+	background-image: url(man.webp);
+	position: relative;
+	bottom: -90px;
+	left:500;
+	right: 0;
+	z-index: 1;
+	background-repeat: repeat-x;
+	animation: walk1 1s steps(6) infinite,
+				forward1 5s linear infinite;
+}
+@keyframes walk1{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: 623px;
+	}
+}
+@keyframes forward1{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(550px);
+	}
+}
+
+#home{
+	width: 300px;
+	height: 400px;
+	left: 1270px;
+	bottom: -56px;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 2;
+}
+#home img
+{
+	width: 100%;
+	animation: home 1s linear infinite;
+}
+@keyframes home
+{
+	100%
+	{
+		transform: translateY(-1px);
+	}
+	50%
+	{
+		transform: translateY(1px);
+	}
+	0%
+	{
+		transform: translateY(-1px);
+	}
+}
